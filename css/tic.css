@@ -1,0 +1,44 @@
+html, body{
+  height:100%;
+}
+#board{
+	height:100%;
+}
+.position{
+	border-style: ridge;
+	border-width:3px;
+	vertical-align: middle;
+	margin-left:0px;
+	height:100%;
+	width:33.3%;
+	display:inline-block;
+}
+.position:hover{
+	border-color:red;
+}
+.position p{
+	position: relative;
+	top: 20%;
+	/*font-size:100px;*/
+	 font-size: calc(5em + 1vmin);
+}
+.horizontal-row{
+	height:33.3%;
+}
+.menu-option{
+	position:absolute;
+	top:20px;
+	left:20px;
+	z-index:999;
+	font-size: 50px;
+	opacity:.3;
+}
+.glyphicon {
+    
+}
+.won{
+	border-color:green !important;
+}
+.menu-option:hover{
+opacity:1;
+}

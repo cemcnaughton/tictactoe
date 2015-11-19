@@ -1,0 +1,36 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Tic Tac Toe</title>
+  <meta name="description" content="Tic Tac Toe">
+  
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/tic.css">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+<script src="js/angular/angular.js"></script>
+  <script src="js/angular-tic-tac-toe.js"></script>
+</head>
+
+<body>
+<div ng-app="tictactoe" style="height:100%">
+	<div ng-controller="playController" style="height:100%">
+		<span aria-hidden="true" title="Restart" ng-click="reset()" class="glyphicon glyphicon-lg glyphicon-refresh menu-option"></span>
+		<h3 class="win text-center" ng-show="false">{{player}} won</h3>
+		<h5 class="error text-center" ng-show="error">That place has been taken</h5>
+		<div id="board" >
+			<div class="horizontal-row" ng-repeat="start in [0,3,6]" >
+				<span class="text-center position" 
+				ng-click="move(index)" ng-class="{'won':winningValues.indexOf(index)>-1}" 
+				ng-repeat="index in [start + 1,start + 2,start + 3]" id="{{index}}" ><p>{{board[index]}}</p></span>
+			</div>
+		</div>
+	</div>
+<div>  
+  
+
+  
+</body>
+</html>
